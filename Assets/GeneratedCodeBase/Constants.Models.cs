@@ -5,6 +5,9 @@ namespace Constants
     {
 
         // --- Ungrouped ---
+        public const string CursorService = "CMS/CursorService";
         public const string ExampleGameplayServiceSettings = "CMS/ExampleGameplayServiceSettings";
+        public const string MusicService = "CMS/MusicService";
+        public const string Particles = "CMS/Prefabs/Particles";
     }
 }

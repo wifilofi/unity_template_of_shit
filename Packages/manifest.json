@@ -1,6 +1,9 @@
 {
   "dependencies": {
-    "com.megurte.cms": "https://github.com/megurte/ContentManagementSystem.git?path=/src#1.5.2",
+    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+    "com.gilzoide.update-manager": "https://github.com/gilzoide/unity-update-manager.git#1.5.3",
+    "com.megurte.cms": "https://github.com/megurte/ContentManagementSystem.git?path=/src#1.5.21",
+    "com.unity.feature.2d": "2.0.2",
     "com.unity.ide.rider": "3.0.38",
     "com.unity.inputsystem": "1.17.0",
     "com.unity.render-pipelines.universal": "17.3.0",
@@ -18,6 +21,7 @@
     "com.unity.modules.jsonserialize": "1.0.0",
     "com.unity.modules.particlesystem": "1.0.0",
     "com.unity.modules.physics": "1.0.0",
+    "com.unity.modules.physics2d": "1.0.0",
     "com.unity.modules.screencapture": "1.0.0",
     "com.unity.modules.ui": "1.0.0"
   }

@@ -263,6 +263,7 @@ namespace ServiceLocator.Scripts
             else if (sceneContainers.ContainsValue(this))
             {
                 sceneContainers.Remove(gameObject.scene);
+                services.DisposeAll();
             }
         }
 

@@ -7,6 +7,7 @@ namespace ServiceLocator.Scripts
     public class ServiceManager
     {
         readonly Dictionary<Type, object> services = new Dictionary<Type, object>();
+        readonly List<IDisposable> _disposables = new List<IDisposable>();
         public IEnumerable<object> RegisteredServices => services.Values;
 
         public bool TryGet<T>(out T service) where T : class
@@ -41,6 +42,10 @@ namespace ServiceLocator.Scripts
             {
                 Debug.LogError($"ServiceManager.Register: Service of type {type.FullName} already registered");
             }
+            else if (service is IDisposable disposable)
+            {
+                _disposables.Add(disposable);
+            }
 
             return this;
         }
@@ -57,8 +62,19 @@ namespace ServiceLocator.Scripts
             {
                 Debug.LogError($"ServiceManager.Register: Service of type {type.FullName} already registered");
             }
+            else if (service is IDisposable disposable)
+            {
+                _disposables.Add(disposable);
+            }
 
             return this;
+        }
+
+        public void DisposeAll()
+        {
+            foreach (var disposable in _disposables)
+                disposable.Dispose();
+            _disposables.Clear();
         }
     }
 }

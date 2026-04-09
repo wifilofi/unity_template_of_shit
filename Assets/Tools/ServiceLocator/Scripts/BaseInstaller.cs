@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Tools.ServiceLocator.Scripts
 {
@@ -10,5 +11,6 @@ namespace Tools.ServiceLocator.Scripts
         }
 
         protected abstract void AfterInstall();
+        
     }
 }

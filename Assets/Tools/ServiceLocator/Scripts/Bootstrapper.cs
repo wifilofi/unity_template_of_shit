@@ -1,8 +1,9 @@
-﻿using Tools.ServiceLocator.Scripts;
+using Tools.ServiceLocator.Scripts;
 using UnityEngine;
 
 namespace ServiceLocator.Scripts
 {
+    [DefaultExecutionOrder(-900)]
     [DisallowMultipleComponent]
     [RequireComponent(typeof(ServiceLocator))]
     public abstract class Bootstrapper : MonoBehaviour
@@ -25,6 +26,8 @@ namespace ServiceLocator.Scripts
             {
                 Instantiate(Resources.Load<GameBootstrapper>("GameBootstrapper"));
             }
+            
+            
             Bootstrap();
         }
 
